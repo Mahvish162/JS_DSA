@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // (1) Calculate Area & perimeter of Rectangle
+        let a=5
+        let b=7
+        console.log("area of rectangle "+a*b)
+        console.log("Perimeter of rectangle "+2*(a+b))
+
+        // (2) Generate an OTP
+        console.log(Math.trunc((Math.random()*9000)+1000))
+
+        // (3) Area of triangle by Herons formula------> sqrt(s * (s-a) * (s-b) * (s-c)) where s=semi perimeter((a+b+c)/2)
+
+        let d=5
+        let e=4
+        let f=3
+
+        let s=(d+e+f)/2
+
+        console.log(Math.sqrt(s * (s-d) * (s-e) * (s-f)))
+
+        // (4) Calculate area of circle
+
+        let r=12;
+        console.log( Number((2 * Math.PI * r).toFixed(2)) )
+
+    </script>
+</body>
+</html>

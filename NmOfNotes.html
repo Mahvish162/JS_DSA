@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 4889/500=9  ==>> 4883 contains 9 notes of 500  
+        // 4889%500=389 ===>> after taking 9 notes of 500 how many notes we are left with->389
+
+        let amount=Number(prompt("Enter the amount"))
+        
+        if(amount>=500){
+            console.log("500 Notes are : " + Math.floor(amount/500))
+            amount=amount%500   //389 left
+        }
+        if(amount>=200){
+           console.log("200 notes are : "+ Math.floor(amount/200))
+           amount=amount%200    //189 left
+        }
+        if(amount>=100){
+            console.log("100 notes are : "+Math.floor(amount/100))
+            amount=amount%100   //83 left
+        }
+        if(amount>=50){
+            console.log("50 notes are : "+Math.floor(amount/50))
+            amount=amount%50    //39 left
+        }
+        if(amount>=20){
+            console.log("20 notes are : "+Math.floor(amount/20))
+            amount=amount%20    //19 left
+        }
+        if(amount>=10){
+            console.log("10 notes are : "+Math.floor(amount/10))
+            amount=amount%10    //9 left
+        }
+        if(amount>=5){
+            console.log("5 notes are : "+Math.floor(amount/5))
+            amount=amount%5     //4 left
+        }
+        if(amount>=2){
+            console.log("2 notes are : "+Math.floor(amount/2))
+            amount=amount%2     //0 left
+        }
+        console.log("1 note is  : "+amount)
+    </script>
+</body>
+</html>
