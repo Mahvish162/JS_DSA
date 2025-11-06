@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // use while loop when we just know where to stop 
+
+        // var ans=prompt("Enter anything(Exit for close)")
+
+        // while(ans!='exit'){
+        //     ans=prompt("enter anyhting (exit for close)")
+        // }
+
+
+        let pr = prompt("Enter a Number to find a sum of it's digit ->")
+
+        if (isNaN(pr)) {
+            console.log("cancelled")
+        }
+        else {
+            let num = Number(pr)
+
+            if (num > 0) {
+
+                let sum=0;
+                while(num>0){
+                    
+                    var rem=num%10;
+                    sum+=rem;
+                    num=Math.floor(num/10);
+                }
+                console.log(sum)
+            }
+            else {
+                console.log("enter a non negative number")
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

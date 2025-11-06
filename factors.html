@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pr=prompt("Enter a Number to find a factor of it ->")
+
+        if(isNaN(pr)){
+            console.log("cancelled")
+        }
+        else{
+            let num=Number(pr)
+            
+            if(num>0){
+
+                for(var i=1;i<=Math.floor(num/2);i++){
+                    if(num%i===0){
+                        console.log(i)
+                    }
+                }
+                 console.log(num)
+            }
+            else{
+                console.log("enter a non negative number")
+            }
+        }
+
+
+    </script>
+</body>
+</html>

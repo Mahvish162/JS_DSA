@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // QUESTION 1----------------------------->print each character on a new line
+        let s = "sheriyans"
+        let n = s.length;
+        for (let i = 0; i < n; i++) {
+            console.log(s.charAt(i))
+        }
+
+        // QUESTION 2-----------------------------> print string in a reverse order
+        for (let i = n - 1; i >= 0; i--) {
+            console.log(s.charAt(i))            // FOR prinitng each letter in d/f line
+        }
+
+        //reverse a string                       // FOR prinitng each letter in same line    
+        let rev = ""
+        for (let i = n - 1; i >= 0; i--) {
+            rev = rev + s.charAt(i);
+        }
+        console.log(rev)
+
+        // TC----> O(n2)        String concatenation inside loop
+        // SC----> O(n)         Reversed string stored separately
+
+        s="hello"
+        let arr = s.split(''); // strings are immutable, so use an array
+        let n1 = arr.length;
+
+        for (let i = 0, j = n - 1; i < j; i++, j--) {
+            let temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+        let reversed = arr.join('');
+        console.log(reversed); // "olleh"
+
+        // TC-------->O(N)
+        // SC--------->O(N)
+
+        
+    </script>
+</body>
+
+</html>

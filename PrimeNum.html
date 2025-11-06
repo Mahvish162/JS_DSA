@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        let pr=prompt("Enter a number")
+
+        if(isNaN(pr)){
+            console.log("cancelled")
+        }
+        else{
+            let n=Number(pr)
+
+            if(pr>0){
+                let isPrime=true;
+                for(let i=2;i<=Math.floor(n/2);i++){
+                    if(n%i===0){
+                        isPrime=false;
+                        break;
+                    }
+                }
+                if(isPrime){
+                    console.log("Number is a prime ")
+                }
+                else{
+                    console.log("Number is not a prime")
+                }
+            }   
+            else{
+                console.log("enter a non negative number")
+            } 
+        }
+    </script> -->
+
+
+    <!-- <script>
+        let pr = prompt("Enter a number")
+
+        if (isNaN(pr)) {
+            console.log("cancelled")
+        }
+        else {
+            let n = Number(pr)
+
+            if (n > 0) {
+
+
+                let a=isPrime(n);
+
+                if(a){
+                    console.log("Number is a prime ")
+                }
+                else{
+                    console.log("Number is not a prime")
+                }
+            }
+            else {
+                console.log("enter a non negative number")
+            }
+        }
+        // 2 ke baad koi even prime number nhi hota
+        // agar koi number jo ki odd hai ,then 2 se  sqrt(num) tk agar koi bhi number uss number se divide nhi ho paa rha h then, it is mathematically proven, ki wo number apne sqrt ke number ke aage wale numbers se bhi divide nhi ho payega...
+
+
+        function isPrime(n) {
+
+            if (n <= 1) return false;
+            if (n == 2) return true;
+            if (n % 2 == 0) return false;    //for even
+
+            //for odd
+            for (let i = 3; i <= Math.floor(Math.sqrt(n)); i += 2) {
+                if (n % i === 0) {
+                    return false
+                    break;
+                }
+            }
+            return true;
+
+        }
+    </script> -->
+
+    <script>
+        let pr = prompt("Enter a number : ")
+
+        if (isNaN(pr)) {
+            console.log("cancelled")
+        }
+        else {
+            let a = Number(pr)
+
+            if (a > 0) {
+                console.log(isPrime(a));
+            }
+            else {
+                console.log("enter a non negative value");
+            }
+        }
+
+        function isPrime(n) {
+
+            if (n <= 1) return false;
+            if (n == 2) return true;
+            if (n % 2 == 0) return false;         // for even
+
+            for (let i = 3; i <= Math.floor(Math.sqrt(n)); i += 2) {
+                if (n % i === 0)
+                    return false;
+            }
+            return true;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

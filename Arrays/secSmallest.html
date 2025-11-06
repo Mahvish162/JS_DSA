@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 3, 2, 5, 4, 8, 7, 9]
+        console.log(arr)
+        let n = arr.length;
+
+        //brute---> sort then find larg then find seclarg
+
+        //sort
+
+        //sorted [1,2,3,4,5,7,8,9]
+        // arr.sort((a, b) => a - b);
+
+        // console.log(arr)
+
+        // let small = arr[0]
+        // let secSmall = arr[1]
+
+        // for (let i = 0; i <= n - 1; i++) {
+        //     if(arr[i]>small){
+        //         secSmall=arr[i]
+        //         break;
+        //     }
+        // }
+
+        // console.log("second smallest----> ",secSmall)
+
+
+        //better ->double traversal, first tranversal-> find largest, then sec traversal me find secd largest
+        
+        // let small=Infinity;
+        // for(let i=0;i<=n-1;i++){
+        //     if(arr[i]<small){
+        //         small=arr[i]
+        //     }
+        // }
+        // console.log("small ",small)
+
+        // let secSmall=Infinity;
+        // for(let i=0;i<=n-1;i++){
+        //     if(arr[i]>small && arr[i]<secSmall){
+        //         secSmall=arr[i];
+        //     }
+        // }
+        // console.log("second smallest----> ",secSmall)
+
+        //Optimal----> single traversal find both small and secondSmall
+
+        let small=Infinity
+        let secSmall=Infinity
+        for(let i=0;i<=n-1;i++){
+            if(arr[i]<small ){
+                secSmall=small
+                small=arr[i];
+            }
+            else if(arr[i]<secSmall && arr[i]!=small){
+                secSmall=arr[i];
+            }
+        }
+         console.log("second smallest----> ",secSmall)
+
+    </script>
+</body>
+
+</html>

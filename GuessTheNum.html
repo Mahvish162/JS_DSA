@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let random = Math.floor((Math.random()*100) + 1)
+
+        let guess = -1;
+        while (guess !== random) {
+
+            guess = Number(prompt("Enter the number :"))
+
+            if (isNaN(guess) || guess < 1 || guess > 100) {
+                console.log("try again b/w 1 and 100-->")
+                continue
+            }
+
+            if (guess < random) {
+                console.log("Too low, try again")
+            }
+            else if (guess > random) {
+                console.log("Too high, try again")
+            }
+            else {
+                console.log("Congrats🎀 the guessed number is ", guess)
+            }
+        }
+
+    </script>
+</body>
+
+</html>

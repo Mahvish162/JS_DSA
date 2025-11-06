@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let s = prompt("Enter a string 1st");
+        let t = prompt("Enter a string 2nd")
+
+        //BRUTE FORCE   TC-O(NLOGN)   SC-O(N)
+
+        // if (s.length != t.length) return false;
+
+        // let sorted1 = s.split('').sort().join('');
+        // let sorted2 = t.split('').sort().join('');
+
+        // return sorted1 === sorted2;
+
+        // BETTER APPROACH (Frequency array)
+
+        
+        if(s.length!=t.length)console.log("not an anagram")
+
+        let freq=new Array(128).fill(0)
+
+        for(let i=0;i<s.length;i++){            
+            let ch=s.charCodeAt(i);         //ascii values taken in ch
+            freq[ch]=freq[ch]+1;
+        }
+
+        for(let i=0;i<t.length;i++){
+            let ch=t.charCodeAt(i)
+            freq[ch]=freq[ch]-1;
+        }
+
+        let isAnagram=true;
+        for(let i=0;i<freq.length;i++){
+            if(freq[i]!==0){
+                isAnagram=false;
+                break;
+            }
+        }
+
+        if(isAnagram){
+            console.log("anagram")
+        }
+        else{
+            console.log("not an anagram")
+        }
+        
+
+
+    </script>
+</body>
+
+</html>

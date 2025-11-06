@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let pr = prompt("Enter a number")
+
+        if (isNaN(pr)) {
+            console.log("cancelled")
+        }
+        else {
+            let n = Number(pr)
+
+            if (pr > 0) {
+
+                // 1234-->4321
+
+                let rev = 0;
+
+                while (n > 0) {
+                    let rem = n % 10;
+                    rev = rev * 10 + rem;
+                    n = Math.floor(n / 10);
+                }
+                console.log(rev)
+            }
+            else {
+                console.log("enter a non negative number")
+            }
+        }
+    </script>
+</body>
+
+</html>

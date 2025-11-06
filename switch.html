@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        let day=Number(prompt("Enter the day"))
+
+        switch(day){
+            case 1:
+            case 2:
+            case 3:
+                console.log("monday")
+                break
+            case 4:
+                console.log("tuesday")
+                break               
+            default:
+                console.log("sunday")
+        }
+    </script> -->
+
+    <!-- <script>
+        switch (true) {
+            case 19 < 6:
+                console.log("hello")
+                break
+            case 10 > 90:
+                console.log("hey")
+                break
+            default:
+                console.log("invalid")
+
+        }
+    </script> -->
+
+
+    <script>
+        // let sum = 0.1 + 0.2
+
+        // switch (sum) {
+        //     case 0.4: console.log(sum)
+        //         break
+
+        //     case 0.3: console.log(sum)
+        //         break
+
+        //     default: console.log("invalid num")
+        // }
+
+        // This code gives us invalid answer bcoz in js 0.1 + 0.2 !== 0.3 this is bcoz of js uses IEEE 754 Double precision floating point format(64 - bit) to represent all numbers,
+        //     This is  a binary system not a decimal, so when we write 0.1 it gets converts into binary fraction, 0.1 in binary is repeating and infinite, same for 0.2,
+
+        // It actually stores something like:
+
+        // 0.10000000000000000555 +
+        //     0.20000000000000001110 =
+        // 0.30000000000000004440
+
+        // use below method for result 
+    </script>
+
+    <script>
+        let add=Number((0.1 + 0.2).toFixed(1))  // as toFixed gave string, and switch uses strict comparison , where "0.3" != 0.3, thats why first convert it into number
+
+        switch(add){
+            case 0.2 : console.log(add)
+            break
+
+            case 0.3 : console.log(add)
+            break
+
+            default : console.log("invalid")
+        }
+    </script>
+</body>
+
+</html>

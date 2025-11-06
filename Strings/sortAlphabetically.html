@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // QUESTION 4----------------------------->sort a given string in alphabetical order
+        s="Mahvish Fatima 2003"
+        let arr=s.split('');
+        n=arr.length
+
+        for(let i=0;i<n;i++){
+            for(let j=0;j<n-1;j++){
+               if(arr[j]>arr[j+1]){
+                    let c=arr[j+1]
+                    arr[j+1]=arr[j]
+                    arr[j]=c;
+               }
+            }
+        }
+
+        console.log("after sorting in alphabetical order "+ arr.join(''));
+
+</script>
+</body>
+</html>

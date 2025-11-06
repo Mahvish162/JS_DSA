@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("enter first string ");
+        let b = prompt("enter substring ")
+        let idx = Number(prompt("Enter the index at which substring should be added"));
+
+        let str = "";
+
+        for (let i = 0; i < idx; i++) {
+            str = str + a.charAt(i);
+        }
+
+        str = str + b;
+        
+        for (let i = idx;i<=a.length;i++){
+            str+=a.charAt(i);
+        }
+
+        console.log(str)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let pr = prompt("Enter a Number to find if it is strong or not??")
+
+        if (isNaN(pr)) {
+            console.log("cancelled")
+        }
+        else {
+            let num = Number(pr)
+
+            if (num > 0) {
+
+                //    145=!1+!4+!5
+
+                let sum = 0;
+                let copy = num;
+                while (num > 0) {
+                    let rem = num % 10;
+                    sum = sum + fact(rem)
+                    num = Math.floor(num / 10)
+                }
+
+                if (sum == copy) console.log("number is a strong number")
+                else console.log("not a strong number")
+
+            }
+            else {
+                console.log("enter a non negative number")
+            }
+        }
+
+
+        function fact(n) {
+            let fact = 1;
+            for (let i = 1; i <= n; i++) {
+                fact = fact * i;
+            }
+            return fact;
+        }
+
+    </script>
+</body>
+
+</html>

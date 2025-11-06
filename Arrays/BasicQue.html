@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = []
+        arr.push(100)
+        arr.push(10)
+        arr.push("mahvish fatima")
+        arr.push('jk')
+        console.log(arr)
+        console.log(arr[3])
+        arr.unshift("mahvish")
+        console.log(arr)
+        arr.splice(1, 0, "hello", "hiii");
+        console.log(arr)
+        arr.splice(1, 2)
+        console.log(arr)
+
+        // taking elements as an input from the user using prompt function 
+
+        // let arr1 = new Array(6)
+
+        // for (i = 0; i <= arr1.length - 1; i++) {
+        //     arr1[i] = Number(prompt("Enter a number"))
+        // }
+        // console.log(arr1)
+
+
+        // questions on array------------------------------
+
+        // sum of n elements of an array
+
+        let arr2 = [10, 20, 30, 40, 50]
+        let sum = 0;
+        for (i = 0; i <= arr2.length - 1; i++) {
+            sum = sum + arr2[i];
+        }
+        console.log("sum of an array2 ", arr2 + " is : ", sum)
+
+
+        //max eleemnt from an array
+
+        let max=arr2[0];
+
+        for(i=0;i<=arr2.length-1;i++){
+            if(max<arr2[i]){
+                max=arr2[i];
+            }
+        }
+        console.log("maximum element from an array2 is : ",max)
+
+         //min eleemnt from an array
+
+        let min=arr2[0];
+
+        for(i=0;i<=arr2.length-1;i++){
+            if(arr2[i]<min){
+                min=arr2[i];
+            }
+        }
+        console.log("minimum element from an array2 is : ",min)
+
+       
+    </script>
+</body>
+
+</html>

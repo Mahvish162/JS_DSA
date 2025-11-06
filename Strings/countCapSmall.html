@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- count capital, small letters,digits,spaces,words, and special characters in a given string  -->
+    <script>
+        let s=prompt("enter the string")
+
+        let caps=0,small=0,digits=0,words=0,spc=0,spcl=0;
+
+        for(let i=0;i<s.length;i++){
+            if(s.charAt(i)>='A' && s.charAt(i)<='Z'){
+                caps++;
+            }
+            else if(s.charAt(i)>='a' && s.charAt(i)<='z'){
+                small++;
+            }
+            else if(s.charAt(i)>='0' && s.charAt(i)<='9'){
+                digits++;
+            }
+            else if(s.charAt(i)==" "){
+                spc++;
+            }
+            else{
+                spcl++
+            }
+        }
+
+        console.log("Capitals are :",caps," small are : ",small," digits are : ",digits," spaces are : ",spc," words are : ",spc+1," special chars are : ",spcl)
+</script>
+</body>
+</html>

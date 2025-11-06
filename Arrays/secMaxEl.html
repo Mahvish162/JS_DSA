@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /// Brute force--------> sort the array, find largest, then iterate from second largest el. and find second largest
+
+        let arr = [1, 6, 4, 2, 3, 6, 8, 4, 3, 2, 6]
+        let n = arr.length
+
+
+        // arr.sort((a, b) => a - b);
+        // let larg=arr[n-1]
+        // let seclarg=0;
+
+        // for(i=n-2;i>=0;i--){
+        //     if(arr[i]!=larg ){
+        //          seclarg=arr[i];
+        //          break;
+        //     }
+        // }                       
+
+        // console.log("Second largest element is : "+seclarg)
+
+        //Better 
+        // let largest=arr[0];
+        // for(let i=0;i<n;i++){
+        //     if(arr[i]>largest){
+        //         largest=arr[i];
+        //     }
+        // }//largest found
+        // let seclarg=0;
+        // for(let i=0;i<n;i++){
+        //     if(arr[i]<largest && arr[i]>seclarg){
+        //         seclarg=arr[i]
+        //     }
+        // }
+        // console.log(seclarg)
+
+
+        //optimal------------> storing largest and seclargest simultaneously
+
+
+        var larg = 0;
+
+        let seclarg = -1;
+
+
+        for (let i = 0; i < n; i++) {
+
+            if (arr[i] > larg) {
+                seclarg = larg;
+                larg = arr[i];
+            }
+            else if (arr[i] > seclarg && arr[i] != larg) {
+                seclarg = arr[i];
+            }
+        }
+        console.log(larg, " is the largest and ", seclarg, " is the second largest")
+
+    </script>
+</body>
+
+</html>
